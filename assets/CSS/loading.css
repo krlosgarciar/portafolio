@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   transition: 1s;
-  transition-delay: 1s;
+  transition-delay: 0.8s;
 }
 
 .spinner {
@@ -39,7 +39,8 @@
 .spinner:before {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, #ff00cc 0%, #333399 100%);
+  /* background-image: linear-gradient(90deg, #ff00cc 0%, #333399 100%); */
+  background-image: linear-gradient(90deg, #7e26c7 0%, #fe0181 100%);
   animation: spin 1s infinite linear;
 }
 .spinner:after {

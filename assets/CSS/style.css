@@ -16,7 +16,7 @@ Default: 1
 
 --- 02 Colores
 
-- Primario: #7e26c7 ,#b11fff,
+- Primario: #651e9f ,#7e26c7 ,#b11fff,
 - Tints: #, 
 - Shades: #;
 - Accents
@@ -32,8 +32,6 @@ Default: 1
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 */
-
-/* ! Generales */
 
 * {
   margin: 0;
@@ -52,70 +50,75 @@ body {
   font-weight: 400;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 /* ? ********************* */
-/* ? NAV ******************/
+/* ? HEADER /
+/* ? ********************* */
 
 .container-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #112b3c;
-  padding: 1.5rem 4rem;
+
+  height: 10rem;
+  padding: 0 5.8rem;
+  max-width: 165rem;
+  margin: 0 auto;
 }
 
-.logo:link {
-  /* font-size: 18px; */
-  text-decoration: none;
-}
-
-.navBar {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* ! => Span */
-.effectLogo {
+.logo {
+  font-size: 7.4rem;
+  font-weight: 700;
   display: inline-block;
-  position: relative;
-  /* animation-name: var(--eVercelS, b);
-  animation-duration: 6s;
-  animation-iteration-count: infinite; */
   color: transparent;
-}
-
-.effectLogo::before {
-  /* animation-name: var(--vercelGrad, a);
-  animation-duration: 6s;
-  animation-iteration-count: infinite; */
-  background: linear-gradient(90deg, var(--start-color), var(--end-color));
+  background: linear-gradient(90deg, #7e26c7, #fe0181);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  /* inset: 0;
-  opacity: 1; */
-  content: var(--content);
-}
-
-a:link,
-a:visited {
-  color: #555;
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  color: #f9cb28;
-  /* color: #112b3c; */
+  /* -webkit-text-fill-color: transparent; */
 }
 
 /* ? ********************* */
-/* ? HEADER */
+/* ? NAVIGATION /
+/* ? ********************* */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.nav-menu-link:link,
+.nav-menu-link:visited {
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link:active {
+  color: #7e26c7;
+}
+
+/* ? ********************* */
+/* ? HERO SECTION */
+/* ? ********************* */
 
 .section-hero {
   /* background-color: #fdf2e9; */
-  padding-top: 7.4rem;
+  /* padding-top: 7.4rem; */
   position: relative;
+  /* height: 10vh !important; */
 }
 
 .hero {
@@ -135,6 +138,21 @@ a:active {
   gap: 1rem;
   align-items: center;
 }
+
+/* ? ********************* */
+/* ? Section Typing JS */
+
+.text-typ {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(90deg, #7e26c7, #fe0181);
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+}
+
+/* ? ********************* */
 
 .primary-text-hero {
   font-size: 5.2rem;
@@ -160,8 +178,130 @@ a:active {
 
 .text-end {
   margin-bottom: 4.8rem;
-  width: 80%;
+  width: 90%;
 }
+
+/* ! => Span */
+.effect-text-hero {
+  display: inline-block;
+  position: relative;
+  animation-name: var(--eVercelS, b);
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  color: transparent;
+}
+
+.effect-text-hero::before {
+  height: 5.6rem;
+  animation-name: var(--vercelGrad, a);
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(90deg, var(--start-color), var(--end-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  content: var(--content);
+}
+
+@keyframes a {
+  0%,
+  16.667%,
+  100% {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+@keyframes b {
+  0%,
+  16.667%,
+  100% {
+    color: #fff;
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    color: #333;
+    opacity: 1;
+  }
+}
+
+@keyframes a2 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+
+  16.667%,
+  66.667% {
+    opacity: 0;
+  }
+}
+
+@keyframes b2 {
+  0%,
+  100% {
+    color: #333;
+    opacity: 1;
+  }
+
+  33.333%,
+  50% {
+    color: #fff;
+    opacity: 1;
+  }
+
+  16.667%,
+  66.667% {
+    color: #333;
+    opacity: 1;
+  }
+}
+
+@keyframes a3 {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+
+  66.667%,
+  83.333% {
+    opacity: 1;
+  }
+}
+
+@keyframes b3 {
+  0%,
+  50%,
+  100% {
+    color: #333;
+    opacity: 1;
+  }
+
+  66.667%,
+  83.333% {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+/* ? ********************* */
+/* ? Fin Efecto */
+/* ? ********************* */
 
 .btn:link,
 .btn:visited {
@@ -171,21 +311,24 @@ a:active {
   padding: 1.6rem 3.2rem;
   border-radius: 10px;
   transition: background-color 0.3s;
-  background-color: #b11fff;
+  background-color: #7e26c7;
   color: #fff;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #7e26c7;
+  background-color: #651e9f;
 }
 
 canvas {
   display: block;
+  /* width: 1710px;
+  height: 755px; */
 }
 
 /* ? ********************* */
 /* ? ABOUT ME */
+/* ? ********************* */
 
 .card-container {
   display: flex;
