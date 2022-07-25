@@ -7,24 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocopyright Web Developer</title>
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/IMG/Favicon/copyrightFavi.ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"
-        href="assets/IMG/Favicon/copyrightFavi.ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/IMG/Favicon/copyrightFavi.ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/IMG/Favicon/copyrightFavi.ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/IMG/Favicon/copyrightFavi.ico/favicon-16x16.png">
-    <link rel="manifest" href="assets/IMG/Favicon/copyrightFavi.ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/IMG/Favicon/copyrightFavi.ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="assets/IMG/Favicon/copyright-64.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/IMG/Favicon/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <!-- FONT-AWESOME -->
     <script src="https://kit.fontawesome.com/58c08eb4ff.js" crossorigin="anonymous"></script>
     <!-- GOOGLE FONT -->
@@ -33,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- ANIMATE.CSS -->
     <!-- https://animate.style/ -->
+    <link rel="stylesheet" href="assets/CSS/general.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/loading.css">
 </head>
@@ -51,8 +37,8 @@
         </a>
         <nav class="navBar">
             <ul class="main-nav-list">
-                <li><a href="#about-me" class="nav-menu-link">Sobre mi</a></li>
-                <li> <a href="#skills" class="nav-menu-link">Habilidades</a></li>
+                <!-- <li> <a href="#skills" class="nav-menu-link">Habilidades</a></li> -->
+                <li><a href="#about-me" class="nav-menu-link">Sobre mí</a></li>
                 <li> <a href="#projects" class="nav-menu-link">Proyectos</a></li>
                 <li> <a href="#contact" class="nav-menu-link">Contacto</a></li>
             </ul>
@@ -79,16 +65,36 @@
                         Escribeme!
                     </a>
                 </section>
-                <canvas id="canvas3d" class="canvas3d"></canvas>
+
+                <picture>
+                    <!-- <source> -->
+                    <!-- <source> -->
+                    <img src="assets/IMG/SVG/undraw_programming_re_kg9v.svg"
+                        alt="Espacio de trabajo de un programador,un chico junto a un monitor y una laptop"
+                        class="hero-img">
+                </picture>
+            </div>
+        </section>
+
+        <section class="section-skills">
+            <div class="container">
+                <div class="skills">
+                    <img src="assets/IMG/SVG/icons8-html-5.svg" alt="Logo HTML5" class="icon-skill">
+                    <img src="assets/IMG/SVG/icons8-css3.svg" alt="Logo CSS3" class="icon-skill">
+                    <img src="assets/IMG/SVG/icons8-javascript.svg" alt="logo javascript" class="icon-skill">
+                    <img src="assets/IMG/SVG/icons8-python.svg" alt="Logo Python" class="icon-skill">
+                    <img src="assets/IMG/SVG/icons8-git.svg" alt="Logo Git" class="icon-skill">
+                    <img src="assets/IMG/SVG/icons8-figma.svg" alt="Logo Figma" class="icon-skill">
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me" class="about-me">
+            <div class="container">
+                <h2 class="heading-about">Sobre mí</h2>
             </div>
         </section>
     </main>
-    <script type="module">
-        import { Application } from './runtime.js';
-        const canvas = document.getElementById('canvas3d');
-        const app = new Application(canvas);
-        app.load('./scene.splinecode');
-    </script>
 
     <script src="assets/JS/spinnerLoading.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
