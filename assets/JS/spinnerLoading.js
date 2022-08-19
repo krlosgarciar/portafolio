@@ -1,15 +1,7 @@
-let spinnerWrapper = document.querySelector(".spinner-wrapper");
+let spinnerWrapper = document.querySelector(".stickyLoading");
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   let s = spinnerWrapper.style;
-  // s.opacity = 1;
   s.opacity = 0;
-  s.zIndex = -1;
-  // (function fade() {
-  //   if ((s.opacity = 1)) {
-  //     s.opacity = 0;
-  //     s.zIndex = -1;
-  //   }
-  // })();
-  // spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+  s.zIndex = -10;
 });

@@ -1,3 +1,14 @@
+.stickyLoading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  /* ? Segunda versión, carga pagina completa */
+  z-index: 9999;
+  transition: 1s;
+  transition-delay: 0.8s;
+}
+
 .spinner-wrapper {
   width: 100%;
   height: 100%;
@@ -5,12 +16,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 1s;
-  transition-delay: 0.8s;
+
+  /* ? Primera versión, de carga */
+  /* z-index: 9999; */
+  /* transition: 1s;
+  transition-delay: 0.8s; */
 }
 
 .spinner {
